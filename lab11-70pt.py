@@ -15,16 +15,17 @@ drawpad.grid(row=0, column=0)
 
 # Create the oval (40x40 -> 80x80)
 circle = drawpad.create_oval(10, 10, 90, 90, fill='green')
-direction = 1
+#direction * 5 = 5
+direction = 5
 # Create our animation function
 def animate():
     global direction
     # Get the x and y co-ordinates of the circle
     x1, y1, x2, y2 = drawpad.coords(circle)
     if x2 > drawpad.winfo_width(): 
-        direction = - 1
+        direction = - 5
     elif x1 < 0:
-        direction = 1
+        direction = 5
     #Move our oval object by the value of direction
     drawpad.move(circle,direction,0)
     # Wait for 1 millisecond, then recursively call our animate function
