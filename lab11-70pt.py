@@ -13,8 +13,8 @@ root = Tk()
 drawpad = Canvas(root, width=800,height=600, background='white')
 drawpad.grid(row=0, column=0)
 
-# Create the oval
-circle = drawpad.create_oval(10, 10, 50, 50, fill='green')
+# Create the oval (40x40 -> 80x80)
+circle = drawpad.create_oval(10, 10, 90, 90, fill='green')
 direction = 1
 # Create our animation function
 def animate():
